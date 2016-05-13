@@ -32,4 +32,4 @@ def test_sign_in(driver, base_url, profile):
     except Exception as e:
         message = "Test failure in sign in test for {}. Exception: {}".format(profile['config'].NOTIFY_ADMIN_URL, e)
         send_to_deskpro(profile['config'], message)
-        pytest.fail("This is something not good")
+        pytest.fail(message)

@@ -37,6 +37,6 @@ function display_status {
 
 display_status $ENVIRONMENT
 
-py.test -v tests/smoke_tests/test_sign_in.py # tests/smoke_tests/test_send_via_csv.py tests/smoke_tests/test_send_via_api.py
+py.test -v tests/smoke_tests/test_sign_in.py tests/smoke_tests/test_send_via_csv.py tests/smoke_tests/test_send_via_api.py
 
 display_result $? 3 "Unit tests"
