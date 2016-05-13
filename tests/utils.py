@@ -159,8 +159,6 @@ def send_to_deskpro(config, message):
         "X-DeskPRO-API-Key": deskpro_api_key,
         'Content-Type': "application/x-www-form-urlencoded"
     }
-    import pdb
-    pdb.set_trace()
 
     resp = requests.post(
         deskpro_api_host + '/api/tickets',
