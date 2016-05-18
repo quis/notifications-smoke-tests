@@ -142,16 +142,17 @@ def get_email_message(config):
 
 
 def send_to_deskpro(config, message):
-    import os
     import requests
-    email = os.environ.get('live_DESKPRO_PERSON_EMAIL')
-    deskpro_team_id = os.environ.get('live_DESKPRO_TEAM_ID')
-    deskpro_api_key = os.environ.get('live_DESKPRO_API_KEY')
-    deskpro_api_host = os.environ.get('live_DESKPRO_API_HOST')
+    email = config.DESKPRO_PERSON_EMAIL
+    deskpro_dept_id = config.DESKPRO_DEPT_ID
+    assigned_agent_team_id = config.DESKPRO_ASSIGNED_AGENT_TEAM_ID
+    deskpro_api_key = config.DESKPRO_API_KEY
+    deskpro_api_host = config.DESKPRO_API_HOST
     message = message
 
     data = {'person_email': email,
-            'department_id': deskpro_team_id,
+            'department_id': deskpro_dept_id,
+            'assigned_agent_team_id': assigned_agent_team_id,
             'subject': 'Notify incident report',
             'message': message
             }

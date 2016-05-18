@@ -19,3 +19,9 @@ class Config(object):
     EMAIL_NOTIFICATION_LABEL = 'notify'
     EMAIL_TRIES = 10
     EMAIL_DELAY = 5
+    DESKPRO_API_HOST = os.environ['live_DESKPRO_API_HOST']
+    DESKPRO_API_KEY = os.environ['live_DESKPRO_API_KEY']
+    DESKPRO_PERSON_EMAIL = os.environ['live_DESKPRO_PERSON_EMAIL']
+    DESKPRO_TEAM_ID = os.environ['live_DESKPRO_TEAM_ID']
+    DESKPRO_DEPT_ID = os.environ['live_DESKPRO_DEPT_ID']
+    DESKPRO_ASSIGNED_AGENT_TEAM_ID = os.environ['live_DESKPRO_ASSIGNED_AGENT_TEAM_ID']
